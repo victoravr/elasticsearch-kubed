@@ -93,7 +93,7 @@ spec:
           # spec.template.spec.containers[elasticsearch].env
           env:
             - name: discovery.zen.ping.unicast.hosts
-              value: "elasticsearch-master.{{ namespace }}.svc.cluster.local,elasticsearch.{{ namespace }}.svc.cluster.local"
+              value: "elasticsearch-master.{{ namespace }}.svc.cluster.local"
             - name: ES_JAVA_OPTS
               value: -Xms{{ data_node.heap_size }} -Xmx{{ data_node.heap_size }}
 
