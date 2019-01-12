@@ -69,12 +69,12 @@ spec:
           # spec.template.spec.containers[elasticsearch].env
           env:
             - name: discovery.zen.ping.unicast.hosts
-              value: "elasticsearch-master.{{ namespace }}.svc.cluster.local,elasticsearch.{{ namespace }}.svc.cluster.local"
+              value: "elasticsearch-master.{{ namespace }}.svc.cluster.local"
             - name: ES_JAVA_OPTS
               value: -Xms512m -Xmx512m
 
             - name: discovery.zen.minimum_master_nodes
-              value: "2"
+              value: "1"
             - name: node.master
               value: "true"
             - name: node.ingest
